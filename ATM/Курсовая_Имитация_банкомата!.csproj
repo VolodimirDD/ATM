@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70484EA6-FAF2-49B8-8B68-5871EC3301B6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Курсовая_Имитация_банкомата_</RootNamespace>
+    <AssemblyName>Курсовая_Имитация_банкомата!</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlokirovkaEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlokirovkaEng.Designer.cs">
+      <DependentUpon>BlokirovkaEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlokirovkaUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlokirovkaUkr.Designer.cs">
+      <DependentUpon>BlokirovkaUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseATM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseATM.Designer.cs">
+      <DependentUpon>ChooseATM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterPinEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterPinEng.Designer.cs">
+      <DependentUpon>EnterPinEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterPinUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterPinUkr.Designer.cs">
+      <DependentUpon>EnterPinUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranzaksiiRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranzaksiiRus.Designer.cs">
+      <DependentUpon>TranzaksiiRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToUpPhoneNumberRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToUpPhoneNumberRus.Designer.cs">
+      <DependentUpon>ToUpPhoneNumberRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToUpCardRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToUpCardRus.Designer.cs">
+      <DependentUpon>ToUpCardRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReplenishmentRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplenishmentRus.Designer.cs">
+      <DependentUpon>ReplenishmentRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawalProcessRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawalProcessRus.Designer.cs">
+      <DependentUpon>WithdrawalProcessRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VihodRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VihodRus.Designer.cs">
+      <DependentUpon>VihodRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseLanduage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseLanduage.Designer.cs">
+      <DependentUpon>ChooseLanduage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCardRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertCardRus.Designer.cs">
+      <DependentUpon>InsertCardRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterPinRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterPinRus.Designer.cs">
+      <DependentUpon>EnterPinRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecognitionRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecognitionRus.Designer.cs">
+      <DependentUpon>RecognitionRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlokirovkaRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BlokirovkaRus.Designer.cs">
+      <DependentUpon>BlokirovkaRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationsRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationsRus.Designer.cs">
+      <DependentUpon>OperationsRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SniatRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SniatRus.Designer.cs">
+      <DependentUpon>SniatRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopovnitRus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopovnitRus.Designer.cs">
+      <DependentUpon>PopovnitRus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCardEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertCardEng.Designer.cs">
+      <DependentUpon>InsertCardEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCardUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertCardUkr.Designer.cs">
+      <DependentUpon>InsertCardUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationsEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationsEng.Designer.cs">
+      <DependentUpon>OperationsEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OperationsUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OperationsUkr.Designer.cs">
+      <DependentUpon>OperationsUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopovnitEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopovnitEng.Designer.cs">
+      <DependentUpon>PopovnitEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopovnitUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopovnitUkr.Designer.cs">
+      <DependentUpon>PopovnitUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecognitionEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecognitionEng.Designer.cs">
+      <DependentUpon>RecognitionEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecognitionUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecognitionUkr.Designer.cs">
+      <DependentUpon>RecognitionUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReplenishmentEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplenishmentEng.Designer.cs">
+      <DependentUpon>ReplenishmentEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReplenishmentUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplenishmentUkr.Designer.cs">
+      <DependentUpon>ReplenishmentUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SniatEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SniatEng.Designer.cs">
+      <DependentUpon>SniatEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SniatUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SniatUkr.Designer.cs">
+      <DependentUpon>SniatUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToUpCardEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToUpCardEng.Designer.cs">
+      <DependentUpon>ToUpCardEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToUpCardUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToUpCardUkr.Designer.cs">
+      <DependentUpon>ToUpCardUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToUpPhoneNumberEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToUpPhoneNumberEng.Designer.cs">
+      <DependentUpon>ToUpPhoneNumberEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToUpPhoneNumberUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToUpPhoneNumberUkr.Designer.cs">
+      <DependentUpon>ToUpPhoneNumberUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionEng.Designer.cs">
+      <DependentUpon>TransactionEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TranzaksiiUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TranzaksiiUkr.Designer.cs">
+      <DependentUpon>TranzaksiiUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VihodEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VihodEng.Designer.cs">
+      <DependentUpon>VihodEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VihodUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VihodUkr.Designer.cs">
+      <DependentUpon>VihodUkr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawalProcessEng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawalProcessEng.Designer.cs">
+      <DependentUpon>WithdrawalProcessEng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawalProcessUkr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawalProcessUkr.Designer.cs">
+      <DependentUpon>WithdrawalProcessUkr.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BlokirovkaEng.resx">
+      <DependentUpon>BlokirovkaEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlokirovkaUkr.resx">
+      <DependentUpon>BlokirovkaUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseATM.resx">
+      <DependentUpon>ChooseATM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterPinEng.resx">
+      <DependentUpon>EnterPinEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterPinUkr.resx">
+      <DependentUpon>EnterPinUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranzaksiiRus.resx">
+      <DependentUpon>TranzaksiiRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToUpPhoneNumberRus.resx">
+      <DependentUpon>ToUpPhoneNumberRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToUpCardRus.resx">
+      <DependentUpon>ToUpCardRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplenishmentRus.resx">
+      <DependentUpon>ReplenishmentRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WithdrawalProcessRus.resx">
+      <DependentUpon>WithdrawalProcessRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VihodRus.resx">
+      <DependentUpon>VihodRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseLanduage.resx">
+      <DependentUpon>ChooseLanduage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertCardRus.resx">
+      <DependentUpon>InsertCardRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterPinRus.resx">
+      <DependentUpon>EnterPinRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecognitionRus.resx">
+      <DependentUpon>RecognitionRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlokirovkaRus.resx">
+      <DependentUpon>BlokirovkaRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationsRus.resx">
+      <DependentUpon>OperationsRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SniatRus.resx">
+      <DependentUpon>SniatRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopovnitRus.resx">
+      <DependentUpon>PopovnitRus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertCardEng.resx">
+      <DependentUpon>InsertCardEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertCardUkr.resx">
+      <DependentUpon>InsertCardUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationsEng.resx">
+      <DependentUpon>OperationsEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OperationsUkr.resx">
+      <DependentUpon>OperationsUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopovnitEng.resx">
+      <DependentUpon>PopovnitEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopovnitUkr.resx">
+      <DependentUpon>PopovnitUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecognitionEng.resx">
+      <DependentUpon>RecognitionEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecognitionUkr.resx">
+      <DependentUpon>RecognitionUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplenishmentEng.resx">
+      <DependentUpon>ReplenishmentEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplenishmentUkr.resx">
+      <DependentUpon>ReplenishmentUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SniatEng.resx">
+      <DependentUpon>SniatEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SniatUkr.resx">
+      <DependentUpon>SniatUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToUpCardEng.resx">
+      <DependentUpon>ToUpCardEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToUpCardUkr.resx">
+      <DependentUpon>ToUpCardUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToUpPhoneNumberEng.resx">
+      <DependentUpon>ToUpPhoneNumberEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToUpPhoneNumberUkr.resx">
+      <DependentUpon>ToUpPhoneNumberUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionEng.resx">
+      <DependentUpon>TransactionEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TranzaksiiUkr.resx">
+      <DependentUpon>TranzaksiiUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VihodEng.resx">
+      <DependentUpon>VihodEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VihodUkr.resx">
+      <DependentUpon>VihodUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WithdrawalProcessEng.resx">
+      <DependentUpon>WithdrawalProcessEng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WithdrawalProcessUkr.resx">
+      <DependentUpon>WithdrawalProcessUkr.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_defolt.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_defolt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\БанкоматыРабочие.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bankomat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_Ukraini.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_Rosii.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_Velikobritanii.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_defolt-.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Sleek-Xp-Basic-Money.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karta_dlia_knopki.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fon_Vstavit_kartu.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karta_dlia_knopki.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karta_dlia_knopki %281%29.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karta_dlia_knopki.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monobank-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20200423_203617-01.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20200423_213234.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_20200423_213234-02.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\klear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1ю1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3ю3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2ю2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5ю5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6ю6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7ю7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8ю8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9ю9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\клеар.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ентер.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Загрузка.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Распознавание.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Щель_для_карты.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Флаг России.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Флаг Великобритании.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Флаг Украины.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Флаг Украины.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Флаг России.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Флаг Великобритании.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Банкомат.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monobank-card-01.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Фон_дефолт.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ввод_пинкода.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Процессы.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Распознавание_Карты.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Перевод с карты на карту.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Блок_карты.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Щель_для-карты.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Конец.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
