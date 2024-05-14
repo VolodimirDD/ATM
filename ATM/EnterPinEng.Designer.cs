@@ -55,7 +55,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 26);
             this.label2.TabIndex = 44;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // nul
             // 
@@ -208,17 +207,15 @@
             this.Fon.Size = new System.Drawing.Size(233, 148);
             this.Fon.TabIndex = 31;
             this.Fon.TabStop = false;
-            this.Fon.Click += new System.EventHandler(this.Fon_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Harrington", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(233, 80);
+            this.label1.Location = new System.Drawing.Point(175, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 21);
             this.label1.TabIndex = 30;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pinkod
             // 
@@ -229,7 +226,6 @@
             this.pinkod.Size = new System.Drawing.Size(126, 36);
             this.pinkod.TabIndex = 29;
             this.pinkod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.pinkod.TextChanged += new System.EventHandler(this.pinkod_TextChanged);
             this.pinkod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pinkod_KeyPress);
             // 
             // EnterPinEng

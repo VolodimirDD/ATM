@@ -16,42 +16,46 @@ namespace Курсовая_Имитация_банкомата_
         {
             InitializeComponent();
 
-            this.BackgroundImage = Properties.Resources.Блок_карты;
+            InitializeFormAppearance();
+            InitializeTimer();
+            DisplayLockMessage();
 
-            this.BackgroundImageLayout = ImageLayout.Stretch;
-
-            this.CenterToScreen();      //Установка формы по центру экрана програмно         
-
-            MaximizeBox = false;
-
-            MinimizeBox = false;
-
-            this.ControlBox = false;
-
-            timer1.Enabled = true;
-
-            timer1.Interval = 3000;
-
-            label1.Text = "Your card is locked as a precaution!";
-
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-     
         }
 
-        private void BlokirovkaEng_Move(object sender, EventArgs e)
+        private void InitializeFormAppearance()
         {
+            this.BackgroundImage = Properties.Resources.Блок_карты;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+            this.CenterToScreen();
+            MaximizeBox = false;
+            MinimizeBox = false;
+            this.ControlBox = false;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+        }
 
-            this.Move += delegate { this.Capture = false; };
+        private void InitializeTimer()
+        {
+            timer1.Enabled = true;
+            timer1.Interval = 3000;
+            timer1.Tick += timer1_Tick;
+        }
 
+        private void DisplayLockMessage()
+        {
+            label1.Text = "Your card is locked as a precaution!";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
 
             timer1.Enabled = false;
+            Application.Exit();
 
-            Application.Exit();     //Заканчиваем программу
+        }
 
+        private void BlokirovkaEng_Move(object sender, EventArgs e)
+        {
+            this.Move += delegate { this.Capture = false; };
         }
     }
 }

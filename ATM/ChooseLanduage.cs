@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Курсовая_Имитация_банкомата_
@@ -14,85 +7,61 @@ namespace Курсовая_Имитация_банкомата_
     {
         public SelectLanguage()
         {
-
             InitializeComponent();
 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            //прозрачный фон для меток
+            label1.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            label3.BackColor = System.Drawing.Color.Transparent;
 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
+            //фон формы
+            this.BackgroundImage = Properties.Resources.Фон_дефолт;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
+            //форму по центру экрана
+            this.CenterToScreen();
 
-            this.BackgroundImage = Properties.Resources.Фон_дефолт;     //Добавления BackgroundImage программно
+            //изображения и прозрачный фон для PictureBox'ов
+            pictureBoxukr.BackgroundImage = Properties.Resources.Флаг_Украины;
+            pictureBoxrus.BackgroundImage = Properties.Resources.Флаг_России;
+            pictureBoxeng.BackgroundImage = Properties.Resources.Флаг_Великобритании;
+            pictureBoxukr.BackgroundImageLayout = pictureBoxrus.BackgroundImageLayout = pictureBoxeng.BackgroundImageLayout = ImageLayout.Stretch;
 
-            this.BackgroundImageLayout = ImageLayout.Stretch;       //Что бы картинка не выходила за пределы формы и не обрезалась
+            //текст меток
+            label1.Text = "Будь ласка, оберіть мову";
+            label2.Text = "Пожалуйста, выберите язык";
+            label3.Text = "Please, select a language";
 
-            pictureBoxukr.BackgroundImage = Properties.Resources.Флаг_Украины;      //Добавления BackgroundImage программно для pictureBox
-
-            pictureBoxukr.BackgroundImageLayout = ImageLayout.Stretch;      //Что бы картинка не выходила за пределы кнопки и не обрезалась
-
-            pictureBoxrus.BackgroundImage = Properties.Resources.Флаг_России;        //Добавления BackgroundImage программно для pictureBox
-
-            pictureBoxrus.BackgroundImageLayout = ImageLayout.Stretch;     //Что бы картинка не выходила за пределы кнопки и не обрезалась
-
-            pictureBoxeng.BackgroundImage = Properties.Resources.Флаг_Великобритании;       //Добавления BackgroundImage программно для pictureBox
-
-            pictureBoxeng.BackgroundImageLayout = ImageLayout.Stretch;      //Что бы картинка не выходила за пределы кнопки и не обрезалась
-
-            this.CenterToScreen();      //Установка формы по центру экрана програмно
-
-            label1.Text = "Будь ласка , оберіть мову";
-
-            label2.Text = "Пожалуйста , выберите язык";
-
-            label3.Text = "Please , select a language";
-
+            // Отключаем кнопки управления 
             MaximizeBox = false;
-
             MinimizeBox = false;
-
             this.ControlBox = false;
-
         }
 
         private void pictureBoxukr_Click(object sender, EventArgs e)
         {
-
-            Hide();     //Свернуть текущую форму
-
-            InsertCardUkr rus = new InsertCardUkr();    //Экземпляр класса 
-
-            rus.Show();       //Открыть форму 
-
+            Hide(); // Скрываем текущую форму
+            InsertCardUkr ukr = new InsertCardUkr(); // Создаем экземпляр формы InsertCardUkr
+            ukr.Show(); // Показываем форму InsertCardUkr
         }
 
         private void pictureBoxrus_Click(object sender, EventArgs e)
         {
-            Hide();     //Свернуть текущую форму
-
-            InsertCardRus rus = new InsertCardRus();    //Экземпляр класса 
-
-            rus.Show();       //Открыть форму 
-
+            Hide();
+            InsertCardRus rus = new InsertCardRus();
+            rus.Show();
         }
 
         private void pictureBoxeng_Click(object sender, EventArgs e)
         {
-
-            Hide();     //Свернуть текущую форму
-
-            InsertCardEng eng = new InsertCardEng();    //Экземпляр класса 
-
-            eng.Show();       //Открыть форму 
-
+            Hide();
+            InsertCardEng eng = new InsertCardEng();
+            eng.Show();
         }
 
         private void SelectLanguage_Move(object sender, EventArgs e)
         {
-
             this.Move += delegate { this.Capture = false; };
-
         }
-
     }
 }

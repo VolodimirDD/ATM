@@ -1,131 +1,92 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace Курсовая_Имитация_банкомата_
 {
     public partial class InsertCardRus : Form
     {
-
-
-
         public InsertCardRus()
         {
-
             InitializeComponent();
 
-            this.BackgroundImage = Properties.Resources.Фон_дефолт;     //Добавления BackgroundImage программно
+            this.BackgroundImage = Properties.Resources.Фон_дефолт;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
 
-            this.BackgroundImageLayout = ImageLayout.Stretch;       //Что бы картинка не выходила за пределы формы и не обрезалась  
+            karta.BackgroundImage = Properties.Resources.Карта_монобанк;
+            karta.BackgroundImageLayout = ImageLayout.Stretch;
+            karta.BorderStyle = BorderStyle.Fixed3D;
 
-            karta.BackgroundImage = Properties.Resources.Карта_монобанк;     //Добавления BackgroundImage программно
+            vstavka.BackgroundImageLayout = ImageLayout.Stretch;
+            vstavka.BackColor = Color.Transparent;
 
-            karta.BackgroundImageLayout = ImageLayout.Stretch;       //Что бы картинка не выходила за пределы формы и не обрезалась  
+            this.CenterToScreen();
 
-            karta.BorderStyle = BorderStyle.Fixed3D;        //Установка BorderStyle программно
+            shel.BackgroundImage = Properties.Resources.Щель_для_карты;
+            shel.BackgroundImageLayout = ImageLayout.Stretch;
 
-            this.CenterToScreen();      //Установка формы по центру экрана програмно
+            label1.Text = "Вставьте свою карту, пожалуйста!";
+            label1.BackColor = Color.Transparent;
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.AutoSize = true;
+            int topMargin = 40;
+            label1.Location = new Point((this.ClientSize.Width - label1.Width) / 2, topMargin);
 
-            vstavka.BackgroundImageLayout = ImageLayout.Stretch;        //Что бы картинка не выходила за пределы формы и не обрезалась  
-
-            vstavka.BackColor = Color.Transparent; ;        //Делаем поле vstavka прозрачным
-
-            shel.BackgroundImage = Properties.Resources.Щель_для_карты;     //Добавления BackgroundImage программно
-
-            shel.BackgroundImageLayout = ImageLayout.Stretch;       //Что бы картинка не выходила за пределы формы и не обрезалась  
-
-            label1.Text = "Вставьте свою карту, пожалуйта!";        //Присвоение текста программно
-
+            // Отключаем кнопки управления 
             MaximizeBox = false;
-
             MinimizeBox = false;
-
             this.ControlBox = false;
-
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-
         }
 
         private void karta_MouseDown(object sender, MouseEventArgs e)
         {
-
             karta.DoDragDrop(karta.BackgroundImage, DragDropEffects.Copy);
-                    
-        }      
-        private void InsertCardRus_Load(object sender, EventArgs e) 
+        }
+
+        private void InsertCardRus_Load(object sender, EventArgs e)
         {
-
             vstavka.AllowDrop = true;
-
         }
 
         private void karta_MouseClick(object sender, MouseEventArgs e)
         {
-
             karta.DoDragDrop(karta.BackgroundImage, DragDropEffects.Copy);
-
         }
 
         private void vstavka_DragEnter(object sender, DragEventArgs e)
         {
-
             label1.Text = "Отпустите карту!";
-
             e.Effect = e.AllowedEffect;
-
         }
 
         private void vstavka_DragDrop(object sender, DragEventArgs e)
         {
-
             label1.Text = "Карта вставлена!";
+            vstavka.BackgroundImage = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            vstavka.BackgroundImageLayout = ImageLayout.Stretch;
+            karta.Dispose();
 
-            vstavka.BackgroundImage = (Bitmap)e.Data.GetData(DataFormats.Bitmap); //Передача данных
-
-            vstavka.BackgroundImageLayout = ImageLayout.Stretch;       //Что бы картинка не выходила за пределы формы и не обрезалась
-
-            karta.Dispose();        //Удаление объекта karta
-
-            timer1.Interval = 1500;  //интервал(1000 = 1 сек). Спустя 1 секунду запустется таймер. Если поставить 10000, то форма 2 повиться через 10 сек;
-
-            timer1.Enabled = true;      //запускаем таймер
-
+            timer1.Interval = 1500;
+            timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
             Hide();
-            
-            timer1.Enabled = false;     //Останавливаем таймер
-            
-            RecognitionRus recognition = new RecognitionRus();        //Создаем экземпляр формы
+            timer1.Enabled = false;
 
-            recognition.Show();       //Открывем другую форму
-
+            RecognitionRus recognition = new RecognitionRus();
+            recognition.Show();
         }
 
         private void vstavka_DragLeave(object sender, EventArgs e)
         {
-
             label1.Text = "Вставьте карту в отмеченную зону!";
-
         }
 
         private void InsertCardRus_Move(object sender, EventArgs e)
         {
-
             this.Move += delegate { this.Capture = false; };
-
         }
-
     }
-
 }

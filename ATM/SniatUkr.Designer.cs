@@ -38,13 +38,14 @@
             this.deneg100 = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Harrington", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(347, 45);
+            this.label1.Location = new System.Drawing.Point(346, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 17;
@@ -152,11 +153,21 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Harrington", 11F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(362, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 17);
+            this.label2.TabIndex = 20;
+            // 
             // SniatUkr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 381);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.balance);
@@ -185,5 +196,6 @@
         private System.Windows.Forms.Button deneg100;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
     }
 }
