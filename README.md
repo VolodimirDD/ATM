@@ -31,7 +31,7 @@ The `.NET Framework` and `.NET Core` platforms were used for application develop
 `Windows Forms` was chosen as the platform for creating the graphical interface of the application, providing an intuitive and appealing user experience.
 
 ## Limitations and Settings
-To ensure ease of use and security of the application, various limitations and settings were programmatically established. For example, the application form is centered on the screen, making its location convenient for the user. Additionally, resizing of the form is prohibited to prevent accidental changes to the application's appearance. 
+To ensure ease of use and security of the application, various limitations and settings were programmatically established. For example, the application form is centered on the screen, making its location convenient for the user. Additionally, resizing of the form is prohibited to prevent accidental changes to the application's appearance and dragging forms is also prohibited. 
 
 For security purposes, the minimize, maximize, and close buttons of the form are hidden to prevent accidental application closure by the user. Restrictions on image sizes are also set to guarantee their proper display in the interface. 
 
@@ -94,6 +94,8 @@ Here you will track the progress of the ATM recognizing your card. Once a certai
 
 Here you need to enter your card PIN. Make sure you enter it correctly, otherwise after *`three incorrect entry`* attempts your card will be blocked indefinitely. 
 
+Also, if you enter an incorrect PIN code, you will see a notification about this, and you will also see the `number of remaining attempts` to enter the correct PIN code so that your card is not blocked.
+
 PIN: `1111`
 
 ### Blocked Card Form
@@ -140,7 +142,11 @@ Here you can select the amount to top up your balance:
 * `500 UAH`
 * `1000 UAH`
 
-There is also a pointer to go back, and there is also a window for displaying the current balance.
+You will also have additional options, such as: 
+* `Go back`
+* `End the session`
+
+There is also a window for displaying the current balance.
 
 ### Replenishment Form
 <details>
@@ -168,7 +174,13 @@ Here you can select the amount to withdraw money:
 * `500 UAH`
 * `1000 UAH`
 
-There is also a pointer to go back, and there is also a window for displaying the current balance.
+You will also have additional options, such as: 
+* `Go back`
+* `End the session`
+
+There is also a window for displaying the current balance.
+
+`Note:` You will not be able to withdraw more money than you have on your balance. If you try to do this, you will see a notification that there is not enough money in your balance. *It appears for 3 seconds*
 
 ### Withdrawal Form
 <details>
@@ -194,13 +206,19 @@ Here you have the opportunity to perform two actions, namely:
 * `Mobile phone number replenishment`
 * `Transfer money to another card`
 
+You will also have additional options, such as: 
+* `Go back`
+* `End the session`
+
 In order to top up a mobile phone number, *you will first need to verify the phone number*, and only then you can enter the top-up amount.
 
 Also for transferring to another card. *First, enter the number of the card to which you want to make a transfer, verify it, and then enter the amount and complete the operation.*
 
+*If you have less money on your balance than you want to send to another card or top up your phone number, you will see a notification about this.*
+
 All actions will take some time, so you will see the process completion time, which you will have to wait.
 
-There is also a pointer to go back, and there is also a window for displaying the current balance.
+There is also a window for displaying the current balance.
 
 ## Project setup
 On Windows platform:<br>
