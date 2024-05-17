@@ -222,4 +222,4 @@ There is also a window for displaying the current balance.
 
 ## Project setup
 On Windows platform:<br>
-*Download [archive](./ATM_Release.rar) which has all needed application components. The application can be started by opening the `.exe` file.*
+*Download [archive](./ATM_Release_exe.rar) which has all needed application components. The application can be started by opening the `.exe` file.*
