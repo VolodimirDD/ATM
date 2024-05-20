@@ -5,7 +5,7 @@
 </p>
 
 ## Description
-The ATM application is a convenient and intuitive interface for interacting with an ATM. Developed using `C#` and the `.NET Framework` and `.NET Core` platforms, it represents a comprehensive solution that combines the capabilities of both platforms. The application provides users with a wide range of banking operations, including *balance inquiry*, *account replenishment*, *cash withdrawal*, *phone number top-up*, *fund transfer*, and *card termination*. The intuitive user interface, created using `Windows Forms`, makes the interaction process simple and secure. Thus, users can efficiently utilize the banking services provided by this application while enjoying its high level of security.
+The ATM application is a convenient and intuitive interface for interacting with an ATM. Developed using `C#` and the `.NET Framework` platform. The application provides users with a wide range of banking operations, including *balance inquiry*, *account replenishment*, *cash withdrawal*, *phone number top-up*, *transferring funds to another card*, and *card termination*. The intuitive user interface, created using `Windows Forms`, makes the interaction process simple and secure. Thus, users can efficiently utilize the banking services provided by this application while enjoying its high level of security.
 
 PIN: `1111`
 
